@@ -5,11 +5,10 @@ module.exports = {
     "react-native/react-native": true,
   },
   extends: [
-    "react",
-    "react-native",
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -18,9 +17,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react"],
+  plugins: ["react", "react-native"],
   rules: {
-    indent: ["error", 2, { SwitchCase: 1 }],
+    indent: ["error", 2, { SwitchCase: 1, offsetTernaryExpressions: true }],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     semi: ["error", "always"],

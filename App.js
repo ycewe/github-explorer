@@ -14,7 +14,6 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <View style={styles.app}>
         <AuthenticationProvider>
-          <StatusBar style="auto" />
           <Router />
         </AuthenticationProvider>
       </View>
@@ -24,7 +23,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   app: {
-    backgroundColor: theme.colors.background,
+    backgroundColor: theme.colors.appBackground,
     flex: 1,
     paddingBottom: 30,
     paddingHorizontal: 30,
