@@ -18,8 +18,9 @@ const Search = ({ search = () => {} }) => {
       <Image style={styles.searchIcon} source={searchIcon} />
       <TextInput
         accessibilityRole="search"
-        style={styles.input}
+        style={styles.searchInput}
         placeholder="Type to search repositories"
+        placeholderTextColor={theme.colors.brandSecondary}
         value={input}
         onChangeText={setInput}
       />
@@ -38,12 +39,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     flex: 1,
     flexDirection: "row",
-    maxHeight: 40,
+    height: 45,
+    maxHeight: 45,
   },
   searchIcon: {
     height: 20,
     marginHorizontal: 15,
     width: 20,
+  },
+  searchInput: {
+    width: "100%",
   },
 });
 

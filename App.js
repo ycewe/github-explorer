@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
   app: {
     backgroundColor: theme.colors.appBackground,
     flex: 1,
-    paddingBottom: 30,
+    paddingBottom: 10,
     paddingHorizontal: 30,
     paddingTop: 55,
   },

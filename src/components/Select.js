@@ -82,12 +82,13 @@ Select.propTypes = {
 
 const styles = StyleSheet.create({
   selectButton: {
+    alignSelf: "center",
     backgroundColor: theme.colors.brandPrimary,
     borderRadius: 5,
-    height: 40,
+    height: 45,
     marginLeft: 10,
     padding: 5,
-    width: 40,
+    width: 45,
   },
   selectOption: {
     flexDirection: "row",

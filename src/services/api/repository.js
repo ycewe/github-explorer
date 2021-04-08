@@ -13,7 +13,7 @@ const Repository = {
     }
   },
 
-  searchAll: async ({ query = "", page = 1, perPage = 30 }) => {
+  searchAll: async ({ query = "", page = 1, perPage = 50 }) => {
     const params = `q=${query}&page=${page}&per_page=${perPage}`;
 
     try {
