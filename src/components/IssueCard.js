@@ -18,6 +18,7 @@ const IssueCard = ({
   return (
     <View style={styles.issueCard}>
       <TouchableOpacity
+        accessibilityRole="button"
         style={styles.issueCardOwner}
         onPress={() => setShowUser(true)}
       >

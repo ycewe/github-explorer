@@ -11,6 +11,7 @@ const ButtonBack = () => {
   return (
     <ButtonIcon
       image={arrowLeftIcon}
+      label="Go back"
       onPress={() => navigation.goBack()}
       style={styles.buttonBack}
     />

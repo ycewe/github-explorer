@@ -29,6 +29,7 @@ const Select = ({
     <>
       <ButtonIcon
         image={icon}
+        label="Sort repositories"
         onPress={() => setShowOptions(true)}
         style={{ ...styles.selectButton, ...style }}
       />
@@ -42,8 +43,10 @@ const Select = ({
 
         {options.map((option) => (
           <TouchableOpacity
-            style={styles.selectOption}
+            accessibilityLabel="Press to select option"
+            accessibilityHint={`Select option ${option.name}`}
             activeOpacity={0.8}
+            style={styles.selectOption}
             key={option.value}
             onPress={() => setSelectedOption(option.value)}
           >

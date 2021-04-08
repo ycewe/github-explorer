@@ -9,7 +9,9 @@ const DetailLayout = ({ children, title = "" }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <ButtonBack />
-        <Text style={styles.headerTitle}>{title}</Text>
+        <Text accessible={true} style={styles.headerTitle}>
+          {title}
+        </Text>
       </View>
 
       {children}

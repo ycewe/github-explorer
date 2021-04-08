@@ -14,6 +14,8 @@ const EmptyList = ({ text = "No results found", buttonOptions = {} }) => {
       <Text style={styles.emptyListText}>{text}</Text>
       {buttonOptions.text && (
         <Button
+          accessibilityHint={`Navigates to ${buttonOptions.route}`}
+          accessibilityRole="link"
           label={buttonOptions.text}
           onPress={() => navigation.push(buttonOptions.route)}
           style={styles.emptyListButton}

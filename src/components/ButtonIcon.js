@@ -2,11 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
 
-const ButtonIcon = ({ image = 0, onPress = () => {}, style = {} }) => {
+const ButtonIcon = ({
+  image = 0,
+  label = "Press button icon",
+  onPress = () => {},
+  style = {},
+}) => {
   return (
     <TouchableOpacity
       style={[styles.button, style]}
-      accessibilityRole="imagebutton"
+      accessibilityRole="button"
+      accessibilityLabel={label}
       onPress={onPress}
     >
       <Image style={styles.buttonIcon} source={image} />
@@ -16,6 +22,7 @@ const ButtonIcon = ({ image = 0, onPress = () => {}, style = {} }) => {
 
 ButtonIcon.propTypes = {
   image: PropTypes.number.isRequired,
+  label: PropTypes.string,
   onPress: PropTypes.func.isRequired,
   style: PropTypes.object,
 };

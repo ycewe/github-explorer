@@ -13,7 +13,11 @@ const Notification = ({ message = "", type = "ERROR" }) => {
   };
 
   return (
-    <View style={[styles.notification, modifiers[type][0]]}>
+    <View
+      accessible={true}
+      accessibilityRole="alert"
+      style={[styles.notification, modifiers[type][0]]}
+    >
       <Text style={[styles.notificationText, modifiers[type][1]]}>
         {message}
       </Text>

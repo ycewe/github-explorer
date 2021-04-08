@@ -20,6 +20,9 @@ const RepositoryCard = ({
 
   return (
     <TouchableOpacity
+      accessibilityLabel="Repository"
+      accessibilityHint="Navigates to the repository screen"
+      accessibilityRole="link"
       style={styles.repositoryCard}
       onPress={() =>
         navigation.navigate(routes.REPOSITORY, {
@@ -34,10 +37,14 @@ const RepositoryCard = ({
             style={styles.repositoryCardTextTitleImage}
             source={{ uri: image }}
           />
-          <Text style={styles.repositoryCardTextTitleName}>{name}</Text>
+          <Text accessible={true} style={styles.repositoryCardTextTitleName}>
+            {name}
+          </Text>
         </View>
 
-        <Text style={styles.repositoryCardTextDescription}>{description}</Text>
+        <Text accessible={true} style={styles.repositoryCardTextDescription}>
+          {description}
+        </Text>
       </View>
 
       <ButtonBookmark

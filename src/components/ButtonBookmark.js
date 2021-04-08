@@ -41,6 +41,7 @@ const ButtonBookmark = ({ id = "", value = "", onChange = () => {} }) => {
   return (
     <ButtonIcon
       image={isFilled ? bookmarkFilledIcon : bookmarkIcon}
+      label="Bookmark repository"
       onPress={fillBookmark}
     />
   );

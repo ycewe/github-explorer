@@ -31,12 +31,18 @@ const ModalView = ({
       visible={isVisible}
     >
       <TouchableOpacity
-        style={styles.modalView}
+        accessibilityHint="Closes modal"
+        accessibilityLabel="Modal overlay"
         activeOpacity={1}
+        style={styles.modalView}
         onPress={onClose}
       >
         <TouchableWithoutFeedback>
-          <View style={[styles.modalViewContent, modifier[animationType]]}>
+          <View
+            accessible={true}
+            accessibilityLabel="Modal content"
+            style={[styles.modalViewContent, modifier[animationType]]}
+          >
             {children}
           </View>
         </TouchableWithoutFeedback>

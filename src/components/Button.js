@@ -21,6 +21,7 @@ const Button = ({
     <TouchableOpacity
       style={[styles.button, style, modifier[type][0]]}
       activeOpacity={0.8}
+      accessibilityRole="button"
       accessibilityLabel={label}
       onPress={onPress}
     >

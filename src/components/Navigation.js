@@ -43,6 +43,7 @@ const Navigation = ({ links = [], subLink = {} }) => {
         {links.map((link) => (
           <TouchableOpacity
             accessibilityRole="tab"
+            accessibilityLabel="Press to navigate tablist"
             activeOpacity={1}
             key={link.route}
             onPress={() => changeTab(link.route)}
@@ -59,7 +60,8 @@ const Navigation = ({ links = [], subLink = {} }) => {
 
         {subLink && (
           <TouchableOpacity
-            accessibilityRole="button"
+            accessibilityRole="link"
+            accessibilityLabel="Press to activate subnavigation"
             key={subLink.route}
             onPress={handleSubNavPress}
             style={[styles.tabsSubTab, styles.tabsTabInactive]}

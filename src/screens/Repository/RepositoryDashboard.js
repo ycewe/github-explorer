@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 import ButtonBookmark from "~/components/ButtonBookmark";
 import theme from "~/config/theme";
@@ -12,12 +12,10 @@ const RepositoryDashboard = ({ owner = "", repo = "" }) => {
 
   return (
     <View style={styles.repositoryDashboard}>
-      <TouchableOpacity style={styles.repositoryDashboardOwner}>
-        <Image
-          style={styles.repositoryDashboardOwnerImage}
-          source={{ uri: data.image }}
-        />
-      </TouchableOpacity>
+      <Image
+        style={styles.repositoryDashboardOwnerImage}
+        source={{ uri: data.image }}
+      />
 
       <View style={styles.repositoryDashboardBookmark}>
         <ButtonBookmark
@@ -33,12 +31,17 @@ const RepositoryDashboard = ({ owner = "", repo = "" }) => {
       </View>
 
       <View style={styles.repositoryDashboardText}>
-        <Text style={styles.repositoryDashboardTextName} numberOfLines={2}>
+        <Text
+          accessible={true}
+          numberOfLines={2}
+          style={styles.repositoryDashboardTextName}
+        >
           {data.name}
         </Text>
         <Text
-          style={styles.repositoryDashboardTextDescription}
+          accessible={true}
           numberOfLines={6}
+          style={styles.repositoryDashboardTextDescription}
         >
           {data.description}
         </Text>
@@ -66,12 +69,10 @@ const styles = StyleSheet.create({
     right: 20,
     top: 15,
   },
-  repositoryDashboardOwner: {
-    marginBottom: 20,
-  },
   repositoryDashboardOwnerImage: {
     borderRadius: 40,
     height: 70,
+    marginBottom: 20,
     width: 70,
   },
   repositoryDashboardText: {

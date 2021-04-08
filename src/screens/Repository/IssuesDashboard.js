@@ -20,9 +20,12 @@ const IssuesDashboard = ({ owner = "", repo = "" }) => {
   return (
     <>
       <View style={styles.issuesDashboardHeader}>
-        <Text style={styles.issuesDashboardHeaderTitle}>Issues</Text>
+        <Text accessible={true} style={styles.issuesDashboardHeaderTitle}>
+          Issues
+        </Text>
         <ButtonIcon
           image={addIcon}
+          label="Create issue"
           onPress={() =>
             navigation.navigate(routes.ISSUE_CREATE, {
               owner,
